@@ -1,7 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { AiFillSound } from 'react-icons/ai'
-import { GoMute } from 'react-icons/go'
-import { FaRedo } from 'react-icons/fa'
 import randomParagraphs from '../randomParagraph.json'
 const generatingRandomParagraph = () => {
   const { paragraphs } = randomParagraphs
