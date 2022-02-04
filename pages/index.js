@@ -1,7 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { AiFillSound } from 'react-icons/ai'
-import { GoMute } from 'react-icons/go'
-import { FaRedo } from 'react-icons/fa'
+import React, { useEffect, useRef, useState } from 'react'
 import randomParagraphs from '../randomParagraph.json'
 const generatingRandomParagraph = () => {
   const { paragraphs } = randomParagraphs
@@ -123,7 +120,7 @@ function TypingTestCodedamn() {
       const activeElement = parentWords.current.children[activeIndex]
       const moveDown =
         activeElement.nextElementSibling.offsetTop !== activeElement.offsetTop
-      moveDown && setTransition((e) => e + forwardOrDown)
+      if (moveDown) setTransition((e) => e + forwardOrDown)
     }
 
     const lastValue = value[value.length - 1]
