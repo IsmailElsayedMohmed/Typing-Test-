@@ -120,7 +120,7 @@ function TypingTestCodedamn() {
       const activeElement = parentWords.current.children[activeIndex]
       const moveDown =
         activeElement.nextElementSibling.offsetTop !== activeElement.offsetTop
-      moveDown && setTransition((e) => e + forwardOrDown)
+      if (moveDown) setTransition((e) => e + forwardOrDown)
     }
 
     const lastValue = value[value.length - 1]
